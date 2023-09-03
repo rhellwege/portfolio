@@ -16,7 +16,6 @@
       buildInputs = [
         pkgs.nodejs
         pkgs.bun
-        pkgs.just
       ];
 
       shellHook = ''
