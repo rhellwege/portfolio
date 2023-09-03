@@ -20,8 +20,8 @@
       ];
 
       shellHook = ''
-        nu -e "just --list"
       '';
     };
+    
   };
 }
