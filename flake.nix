@@ -14,13 +14,14 @@
     # define development environment
     devShells.${system}.default = pkgs.mkShell {
       buildInputs = [
-        pkgs.nodejs
-        pkgs.bun
+        pkgs.nodePackages.pnpm
       ];
 
       shellHook = ''
       '';
     };
+
+    # defaultPackage
     
   };
 }
