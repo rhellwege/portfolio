@@ -6,6 +6,7 @@
   };
 
   outputs = { self, nixpkgs }: 
+
   let
     system = "x86_64-linux";
     pkgs = nixpkgs.legacyPackages.${system};
@@ -14,14 +15,24 @@
     # define development environment
     devShells.${system}.default = pkgs.mkShell {
       buildInputs = [
+        pkgs.nodePackages.typescript
         pkgs.nodePackages.pnpm
+        pkgs.nodejs
       ];
 
       shellHook = ''
       '';
     };
 
-    # defaultPackage
+    defaultPackage.${system} = pkgs.stdenv.mkDerivation {
+      name = "ryan-portfolio";
+      src = "./portfolio/";
+      nativeBuildInputs = [pkgs.nodePackages.pnpm];
+      buildPhase = ''
+        pnpm install
+        pnpm build
+      '';
+    };
     
   };
 }
