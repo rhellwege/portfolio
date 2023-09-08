@@ -1,0 +1,8 @@
+
+
+Understand the problem
+deesign a portfolio including an about section, skills section, and
+
+Plan a solution
+use a static website generator and css to style components.
+I will be using astro for its composibility and because it ships 0 javascript by default (simple)
