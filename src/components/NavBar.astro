@@ -1,0 +1,17 @@
+---
+interface Props {
+    links: [string];
+};
+
+const { links } = Astro.props;
+---
+
+<NavBar>
+    <nav class="flex justify-center gap-2">
+        {links.map(link => (
+            <div class="w-6 bg-blue-700">
+                <a href={link}></a>
+            </div>
+        ))}
+    </nav>
+</NavBar>
