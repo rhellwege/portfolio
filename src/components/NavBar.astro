@@ -1,17 +1,17 @@
 ---
 interface Props {
-    links: [string];
+    links: string[];
 };
 
 const { links } = Astro.props;
 ---
 
-<NavBar>
-    <nav class="flex justify-center gap-2">
-        {links.map(link => (
-            <div class="w-6 bg-blue-700">
-                <a href={link}></a>
+<nav class="flex">
+    {links.map(link => (
+        <div class="flex-auto duration-200 h-14 bg-rose-900 bg-gradient-to-r from-rose-300">
+            <div class="duration-200 h-12 bg-blue-700 hover:bg-slate-700">
+                <a class="px-9">{link}</a>
             </div>
-        ))}
-    </nav>
-</NavBar>
+        </div>
+    ))}
+</nav>
