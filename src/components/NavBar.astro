@@ -1,17 +1,28 @@
 ---
+interface Link {
+    content: string;
+    href: string;
+};
+
 interface Props {
-    links: string[];
+    links: Link[];
 };
 
 const { links } = Astro.props;
+// hack to fix tailwind not being able to generate css if the classname is partial in the sourcefile
 ---
 
-<nav class="flex">
-    {links.map(link => (
-        <div class="flex-auto duration-200 h-14 bg-rose-900 bg-gradient-to-r from-rose-300">
-            <div class="duration-200 h-12 bg-blue-700 hover:bg-slate-700">
-                <a class="px-9">{link}</a>
-            </div>
-        </div>
-    ))}
-</nav>
+<ul>
+    {links.map(l => (<li><a href={l.href}>{l.content}</a></li>))}
+</ul>
+
+<style>
+ul {
+    position: fixed;
+    margin: 0px;
+    padding: 0px;
+    width: 20%;
+    height: 100%;
+    background-color: var(--main-bg-color);
+}
+</style>

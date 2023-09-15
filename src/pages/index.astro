@@ -1,8 +1,23 @@
 ---
+import NavBar from "../components/NavBar.astro";
 import MainLayout from "../layouts/MainLayout.astro"
-import NavBar from "../components/NavBar.astro"
+
+const links = [{content: "Home", href:""}];
 ---
 
 <MainLayout title="Portfolio">
-    <h1>Hello</h1>
+    <main>
+        <NavBar links={links}/>
+        <div class="main_page">
+            {[1,2,3,4,5,61,2,3,4,5,61,2,3,4,5,6].map(x => (<div> hello </div>))}
+            <h1>Hello</h1>
+        </div>
+    </main>
 </MainLayout>
+
+<style>
+.main_page {
+    margin-left: 20%; /* must be the same as the navbar */
+    background-color: var(--main-background-color);
+}
+</style>
