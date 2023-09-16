@@ -12,17 +12,6 @@ const { links } = Astro.props;
 // hack to fix tailwind not being able to generate css if the classname is partial in the sourcefile
 ---
 
-<ul>
+<ul class="fixed m-0 p-0 w-[--navbar-width] h-full bg-[--main-bg-color]">
     {links.map(l => (<li><a href={l.href}>{l.content}</a></li>))}
 </ul>
-
-<style>
-ul {
-    position: fixed;
-    margin: 0px;
-    padding: 0px;
-    width: 20%;
-    height: 100%;
-    background-color: var(--main-bg-color);
-}
-</style>
