@@ -1,0 +1,18 @@
+---
+interface Section {
+    title: string;
+    description: string;
+};
+
+interface Props {
+    sections: Section[];
+};
+
+const { sections } = Astro.props;
+// hack to fix tailwind not being able to generate css if the classname is partial in the sourcefile
+---
+<!-- do not show this when the device is small -->
+<ul class="invisible md:visible bg-[--primary-bg-color] w-[--navbar-width] h-full 
+           fixed p-0 m-0 overflow-auto hover:bg-black duration-1000">
+    {sections.map(s => (<li><a href={`#${s.title}`}>{s.title}</a></li>))}
+</ul>

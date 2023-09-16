@@ -1,13 +1,21 @@
 ---
-interface Props {
+interface Section {
     title: string;
+    description: string;
 };
 
-const { title } = Astro.props;
+interface Props {
+    section: Section;
+};
+
+const { section } = Astro.props;
+const { title, description } = section;
 ---
 
-<div>
-    <h1 class="text-xl">{title}</h1>
+<div class="ml-[--section-ml]">
+    <a id={title}></a>
+    <h1 class="text-2xl">{title}</h1>
+    <p>{description}</p>
     <div>
         <slot />
     </div>

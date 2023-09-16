@@ -1,23 +1,57 @@
 ---
-import NavBar from "../components/NavBar.astro";
-import MainLayout from "../layouts/MainLayout.astro"
+import VerticalNav from "../components/VerticalNav.astro";
+import Section from "../components/Section.astro";
+import MainLayout from "../layouts/MainLayout.astro";
 
-const links = [{content: "Home", href:""}];
+const sections = [
+    { title: "Home", description: "" },
+    { title: "Home", description: "" },
+    { title: "Home", description: "" },
+    { title: "Home", description: "" },
+    { title: "Home", description: "" },
+    { title: "Home", description: "" },
+    { title: "Home", description: "" },
+    { title: "Home", description: "" },
+    { title: "Home", description: "" },
+    { title: "Home", description: "" },
+    { title: "Home", description: "" },
+    { title: "Home", description: "" },
+    { title: "Home", description: "" },
+    { title: "Home", description: "" },
+    { title: "Home", description: "" },
+    { title: "Home", description: "" },
+    { title: "Home", description: "" },
+    { title: "Home", description: "" },
+    { title: "Home", description: "" },
+    { title: "Home", description: "" },
+    { title: "Home", description: "" },
+    { title: "Home", description: "" },
+    { title: "Home", description: "" },
+    { title: "Home", description: "" },
+    { title: "Home", description: "" },
+    { title: "Home", description: "" },
+    { title: "Home", description: "" },
+    { title: "Home", description: "" },
+    { title: "Home", description: "" },
+    { title: "Home", description: "" },
+    { title: "Home", description: "" },
+    { title: "Home", description: "" },
+    { title: "Home", description: "" },
+    { title: "Home", description: "" },
+    { title: "Home", description: "" },
+    { title: "Home", description: "" },
+    { title: "Home", description: "" },
+    { title: "Home", description: "" },
+    { title: "About me", description: "Student at fullerton" }
+];
 ---
 
 <MainLayout title="Portfolio">
-    <main>
-        <NavBar links={links}/>
-        <div class="main_page text-[--primary-color]">
-            {[1,2,3,4,5,61,2,3,4,5,61,2,3,4,5,6].map(x => (<div> hello </div>))}
+    <main class="scroll-smooth">
+        <VerticalNav {sections} />
+        <div class="bg-[--secondary-bg-color] md:ml-[--navbar-width] text-[--primary-color]">
+            {sections.map(section => (<Section {section} />))}
             <h1>Hello</h1>
         </div>
     </main>
 </MainLayout>
-
-<style>
-.main_page {
-    margin-left: 20%; /* must be the same as the navbar */
-    background-color: var(--main-background-color);
-}
-</style>
