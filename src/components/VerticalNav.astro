@@ -12,7 +12,22 @@ const { sections } = Astro.props;
 // hack to fix tailwind not being able to generate css if the classname is partial in the sourcefile
 ---
 <!-- do not show this when the device is small -->
-<ul class="invisible md:visible bg-[--primary-bg-color] w-[--navbar-width] h-full 
-           fixed p-0 m-0 overflow-auto hover:bg-black duration-1000">
-    {sections.map(s => (<li><a href={`#${s.title}`}>{s.title}</a></li>))}
+<ul class="invisible md:visible bg-[--secondary-bg-color] w-[--navbar-width] h-full 
+           fixed p-0 m-0 overflow-auto">
+
+    {sections.map(s => (
+        <li class="skewed rounded-lg bg-[--primary-bg-color] m-3 text-center py-2">
+            <a class="unskewed text-white" href={`#${s.title}`}>{s.title}</a>
+        </li>)
+    )}
+
 </ul>
+
+<style>
+.skewed {
+    transform: skew(-20deg);
+}
+.unskewed {
+    transform: skew(20deg);
+}
+</style>

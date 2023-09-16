@@ -5,43 +5,6 @@ import MainLayout from "../layouts/MainLayout.astro";
 
 const sections = [
     { title: "Home", description: "" },
-    { title: "Home", description: "" },
-    { title: "Home", description: "" },
-    { title: "Home", description: "" },
-    { title: "Home", description: "" },
-    { title: "Home", description: "" },
-    { title: "Home", description: "" },
-    { title: "Home", description: "" },
-    { title: "Home", description: "" },
-    { title: "Home", description: "" },
-    { title: "Home", description: "" },
-    { title: "Home", description: "" },
-    { title: "Home", description: "" },
-    { title: "Home", description: "" },
-    { title: "Home", description: "" },
-    { title: "Home", description: "" },
-    { title: "Home", description: "" },
-    { title: "Home", description: "" },
-    { title: "Home", description: "" },
-    { title: "Home", description: "" },
-    { title: "Home", description: "" },
-    { title: "Home", description: "" },
-    { title: "Home", description: "" },
-    { title: "Home", description: "" },
-    { title: "Home", description: "" },
-    { title: "Home", description: "" },
-    { title: "Home", description: "" },
-    { title: "Home", description: "" },
-    { title: "Home", description: "" },
-    { title: "Home", description: "" },
-    { title: "Home", description: "" },
-    { title: "Home", description: "" },
-    { title: "Home", description: "" },
-    { title: "Home", description: "" },
-    { title: "Home", description: "" },
-    { title: "Home", description: "" },
-    { title: "Home", description: "" },
-    { title: "Home", description: "" },
     { title: "About me", description: "Student at fullerton" }
 ];
 ---
@@ -49,7 +12,7 @@ const sections = [
 <MainLayout title="Portfolio">
     <main class="scroll-smooth">
         <VerticalNav {sections} />
-        <div class="bg-[--secondary-bg-color] md:ml-[--navbar-width] text-[--primary-color]">
+        <div class="bg-[--primary-bg-color] from-[--secondary-bg-color] bg-gradient-to-tr md:ml-[--navbar-width] fixed h-full w-full text-[--primary-color]">
             {sections.map(section => (<Section {section} />))}
             <h1>Hello</h1>
         </div>

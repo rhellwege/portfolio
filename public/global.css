@@ -1,9 +1,10 @@
 /* configuration for colors and other default values. to use with tailwind use [--option] */
 
 :root {
-    --primary-bg-color: rgb(51, 129, 51);
-    --primary-color: rgb(199, 98, 98);
-    --secondary-color: rgb(0,0,0);
+    --primary-bg-color: rgb(86, 94, 105);
+    --primary-color: rgb(130, 233, 152);
+    --secondary-bg-color: rgb(221, 215, 200);
+    --secondary-color: rgb(196, 99, 43);
     --navbar-width: 180px;
     --section-ml: 10%;
 }
