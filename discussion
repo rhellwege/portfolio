@@ -1,0 +1,16 @@
+my progress is about 70% done.
+I have all the architecture laid out. The navbar, and the content section.
+I am currently working on styling the sections components.
+The only thing I have left to do is write the content, include images and styling then I'm done.
+
+I learned many new things because I'm using a static website generator that I am unfamiliar with.
+the framework is called astro, and it is a combination of javascript and html that gets bundled down into html, and does not ship any javascript.
+I've also never used typescript, but it is helpful for letting you know what is going on.
+
+3. when I was deploying to github pages, I had trouble with the routes because they had a slash in the beginning. the solution was to get rid of them.
+
+SUBMISSION:
+presentation is the
+chapter
+
+https://lucide.dev/icons/

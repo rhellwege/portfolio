@@ -3,18 +3,38 @@ import VerticalNav from "../components/VerticalNav.astro";
 import Section from "../components/Section.astro";
 import MainLayout from "../layouts/MainLayout.astro";
 
-const sections = [
-    { title: "Home", description: "" },
-    { title: "About me", description: "Student at fullerton" }
-];
+const section_titles = ["About Me", "Contact Information", "Soft Skills", "Prior Employment", "Projects"];
 ---
 
 <MainLayout title="Portfolio">
     <main class="scroll-smooth">
-        <VerticalNav {sections} />
+        <VerticalNav sections={section_titles} />
         <div class="bg-[--primary-bg-color] from-[--secondary-bg-color] bg-gradient-to-tr md:ml-[--navbar-width] fixed h-full w-full text-[--primary-color]">
-            {sections.map(section => (<Section {section} />))}
-            <h1>Hello</h1>
+        <Section title="About Me">
+            <h2></h2>
+            <p>hello</p>
+            <img src="" alt="">
+        </Section>
+        <Section title="Contact Information">
+            <h2></h2>
+            <p>hello</p>
+            <img src="" alt="">
+        </Section>
+        <Section title="Soft Skills">
+            <h2></h2>
+            <p>hello</p>
+            <img src="" alt="">
+        </Section>
+        <Section title="Prior Employment">
+            <h2></h2>
+            <p>hello</p>
+            <img src="" alt="">
+        </Section>
+        <Section title="Projects">
+            <h2></h2>
+            <p>hello</p>
+            <img src="" alt="">
+        </Section>
         </div>
     </main>
 </MainLayout>

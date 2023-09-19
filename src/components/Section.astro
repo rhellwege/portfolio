@@ -1,22 +1,15 @@
 ---
-interface Section {
-    title: string;
-    description: string;
-};
-
 interface Props {
-    section: Section;
+    title: string;
 };
 
-const { section } = Astro.props;
-const { title, description } = section;
+const { title } = Astro.props;
 ---
 
 <div class="ml-[--section-ml]">
     <a id={title}></a>
     <h1 class="text-2xl">{title}</h1>
-    <p>{description}</p>
-    <div>
+    <div class="text-md text-[--primary-color]">
         <slot />
     </div>
 </div>

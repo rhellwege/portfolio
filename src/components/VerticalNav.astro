@@ -1,33 +1,22 @@
 ---
-interface Section {
-    title: string;
-    description: string;
-};
-
 interface Props {
-    sections: Section[];
+    sections: string[];
 };
 
 const { sections } = Astro.props;
 // hack to fix tailwind not being able to generate css if the classname is partial in the sourcefile
 ---
 <!-- do not show this when the device is small -->
-<ul class="invisible md:visible bg-[--secondary-bg-color] w-[--navbar-width] h-full 
-           fixed p-0 m-0 overflow-auto">
-
-    {sections.map(s => (
-        <li class="skewed rounded-lg bg-[--primary-bg-color] m-3 text-center py-2">
-            <a class="unskewed text-white" href={`#${s.title}`}>{s.title}</a>
-        </li>)
-    )}
-
-</ul>
-
-<style>
-.skewed {
-    transform: skew(-20deg);
-}
-.unskewed {
-    transform: skew(20deg);
-}
-</style>
+<nav class="">
+    <div class="invisible md:visible bg-[--secondary-bg-color] w-[--navbar-width] h-full fixed p-0 m-0">
+        <ul class="h-full px-[--navbar-padding-x] py-[--navbar-padding-y] overflow-auto flex flex-col">
+            {sections.map(s => (
+                <li class="flex-auto ">
+                    <div class="hover:bg-[--focused-color] duration-150 text-center skew-x-[-20deg] py-3 mx-3 rounded-lg bg-[--primary-bg-color]">
+                        <a class="skew-x-[20deg] text-white" href={`#${s}`}>{s}</a>
+                    </div>
+                </li>)
+            )}
+        </ul>
+    </div>
+</nav>
