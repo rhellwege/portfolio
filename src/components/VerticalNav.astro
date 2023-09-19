@@ -12,7 +12,8 @@ const { sections } = Astro.props;
         <ul class="h-full px-[--navbar-padding-x] py-[--navbar-padding-y] overflow-auto flex flex-col">
             {sections.map(s => (
                 <li class="flex-auto ">
-                    <div class="hover:bg-[--focused-color] duration-150 text-center skew-x-[-20deg] py-3 mx-3 rounded-lg bg-[--primary-bg-color]">
+                    <div class="hover:bg-[--focused-color] duration-150 text-center skew-x-[-20deg]
+                                py-3 mx-3 rounded-lg bg-[--primary-bg-color] border-[--border-color] border-2">
                         <a class="skew-x-[20deg] text-white" href={`#${s}`}>{s}</a>
                     </div>
                 </li>)
