@@ -6,7 +6,7 @@ interface Props {
 const { title } = Astro.props;
 ---
 
-<li class="p-6 border-[--border-color] border-2">
+<li class="p-6 md:m-[50px] m-[30px] border-[--border-color] border-2">
     <a id={title}></a>
     <h1 class="text-3xl">{title}</h1>
     <div class="text-lg text-[--primary-color]">
@@ -15,7 +15,4 @@ const { title } = Astro.props;
 </li>
 
 <style>
-li {
-    margin: 100px;
-}
 </style>
