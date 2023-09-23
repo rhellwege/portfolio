@@ -6,13 +6,11 @@ interface Props {
 const { title } = Astro.props;
 ---
 
+<a id={title}></a>
 <li class="p-6 md:m-[50px] m-[30px] border-[--border-color] border-2">
-    <a id={title}></a>
     <h1 class="text-3xl">{title}</h1>
-    <div class="text-lg text-[--primary-color]">
+    <hr class="h-px my-4 bg-[--black] border-0 ">
+    <div class="text-lg text-[--primary-color] p-5">
         <slot />
     </div>
 </li>
-
-<style>
-</style>
