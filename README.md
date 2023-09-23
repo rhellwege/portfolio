@@ -2,6 +2,7 @@
 
 Ryan Hellwege
 CWID: 884590084
+email: rhellwege6@gmail.com
 
 This website is hosted at https://rhellwege.github.io/portfolio/
 
