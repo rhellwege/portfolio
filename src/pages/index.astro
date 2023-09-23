@@ -13,7 +13,7 @@ const section_titles = [
 <MainLayout title="Portfolio">
     <main class="scroll-smooth">
         <VerticalNav sections={section_titles} />
-        <ul class="bg-[--white] md:ml-[--navbar-width] fixed h-full w-full text-[--black]">
+        <ul class="bg-[--white] md:ml-[--navbar-width] fixed w-full h-full text-[--black]">
             <Section title="About Me">
                 <h2></h2>
                 <p>hello</p>
@@ -22,3 +22,11 @@ const section_titles = [
         </ul>
     </main>
 </MainLayout>
+
+<style>
+@media (min-width: 768px) {
+    ul {
+        width: calc(100% - var(--navbar-width));
+    }
+}
+</style>
