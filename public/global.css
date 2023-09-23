@@ -1,15 +1,15 @@
 /* configuration for colors and other default values. to use with tailwind use [--option] */
 
 :root {
-    --primary-bg-color: rgb(86, 94, 105);
-    --primary-color: rgb(174, 201, 180);
-    --secondary-bg-color: rgb(221, 215, 200);
-    --secondary-color: rgb(196, 99, 43);
-    --focused-color: rgb(9, 135, 189);
-    --border-color: rgb(196, 43, 43);
     --border-width: 2px;
     --navbar-width: 220px;
     --navbar-padding-y: 14rem;
     --navbar-padding-x: 1rem;
     --section-ml: 10%;
+    --black: #2f2f2f;
+    --white: #fffce0;
+    --primary-normal: #2d728fff;
+    --primary-focus: #3b8ea5ff;
+    --secondary-normal: #f5ee9eff;
+    --secondary-focus: #f49e4cff;
 }

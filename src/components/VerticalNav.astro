@@ -1,6 +1,10 @@
 ---
+export interface SectionTitle {
+    title: string;
+    img: string;
+};
 interface Props {
-    sections: string[];
+    sections: SectionTitle[];
 };
 
 const { sections } = Astro.props;
@@ -8,16 +12,28 @@ const { sections } = Astro.props;
 ---
 <!-- do not show this when the device is small -->
 <nav class="">
-    <div class="invisible md:visible bg-[--secondary-bg-color] w-[--navbar-width] h-full fixed p-0 m-0">
+    <div class="invisible md:visible bg-[--black] w-[--navbar-width] h-full fixed p-0 m-0">
         <ul class="h-full px-[--navbar-padding-x] py-[--navbar-padding-y] overflow-auto flex flex-col">
             {sections.map(s => (
-                <li class="flex-auto ">
-                    <div class="hover:bg-[--focused-color] duration-150 text-center skew-x-[-20deg]
-                                py-3 mx-3 rounded-lg bg-[--primary-bg-color] border-[--border-color] border-2">
-                        <a class="skew-x-[20deg] text-white" href={`#${s}`}>{s}</a>
-                    </div>
+                <li class="my-auto flex-auto ">
+                    <a class="" href={`#${s.title}`}>
+                        <div class="text-[--primary-normal] hover:text-[--primary-focused] duration-150 text-center p-3 mx-3 rounded-lg 
+                                    bg-[--white] border-[--secondary-normal] hover:border-[--secondary-focused] border-2 flex justify-between text-lg">
+                            <p>{s.title}</p>
+                            <img src={s.img} alt="">
+                        </div>
+                    </a>
                 </li>)
             )}
+            <li class="my-auto">
+                <a class="" href="resume.pdf">
+                    <div class="text-[--primary-normal] hover:text-[--primary-focused] duration-150 text-center p-3 mx-3 rounded-lg 
+                                bg-[--white] border-[--secondary-normal] hover:border-[--secondary-focused] border-2 flex justify-between text-lg">
+                        <p>Download</p>
+                        <img src="download.svg" alt="">
+                    </div>
+                </a>
+            </li>
         </ul>
     </div>
 </nav>

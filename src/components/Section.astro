@@ -6,10 +6,10 @@ interface Props {
 const { title } = Astro.props;
 ---
 
-<div class="ml-[--section-ml]">
+<li class="ml-[--section-ml] border-dotted border-[--border-color] border-2">
     <a id={title}></a>
     <h1 class="text-2xl">{title}</h1>
     <div class="text-md text-[--primary-color]">
         <slot />
     </div>
-</div>
+</li>
