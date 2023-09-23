@@ -1,7 +1,7 @@
 # Portfolio for CPSC 362
 
-## Ryan Hellwege
-## CWID: 884590084
+Ryan Hellwege
+CWID: 884590084
 
 This website is hosted at https://rhellwege.github.io/portfolio/
 
