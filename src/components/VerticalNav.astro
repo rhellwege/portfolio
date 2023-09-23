@@ -12,7 +12,7 @@ const { sections } = Astro.props;
 ---
 <!-- do not show this when the device is small -->
 <nav class="">
-    <div class="invisible md:visible bg-[--black] w-[--navbar-width] h-full fixed p-0 m-0">
+    <div class="font-bold invisible md:visible bg-[--black] w-[--navbar-width] h-full fixed p-0 m-0">
         <ul class="h-full px-[--navbar-padding-x] py-[--navbar-padding-y] overflow-auto flex flex-col space-y-10">
             {sections.map(s => (
                 <li class="my-auto flex-auto ">
