@@ -27,9 +27,7 @@ const section_titles = [
 		<ViewTransitions />
 	</head>
 	<body class="scroll-smooth table tabl-column columns bg-[--white] ">
-		<div>
-			<VerticalNav sections={section_titles} active={title}/> 
-		</div>
+		<VerticalNav sections={section_titles} active={title}/> 
 		<main>
 			<div transition:animate="fade" class="w-full h-full ml-[--navbar-width]">
 				<slot />
