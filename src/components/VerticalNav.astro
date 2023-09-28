@@ -5,9 +5,10 @@ export interface SectionTitle {
 };
 interface Props {
     sections: SectionTitle[];
+    active: string;
 };
 
-const { sections } = Astro.props;
+const { sections, active } = Astro.props;
 // hack to fix tailwind not being able to generate css if the classname is partial in the sourcefile
 ---
 <!-- do not show this when the device is small -->
@@ -15,10 +16,10 @@ const { sections } = Astro.props;
     <div class="font-bold invisible md:visible bg-[--black] w-[--navbar-width] h-full fixed p-0 m-0">
         <ul class="h-full px-[--navbar-padding-x] py-[--navbar-padding-y] overflow-auto flex flex-col space-y-10">
             {sections.map(s => (
-                <li class="my-auto flex-auto ">
-                    <a class="" href={`#${s.title}`}>
-                        <div class="text-[--primary-normal] hover:text-[--primary-focused] duration-150 text-center p-3 mx-3 rounded-lg 
-                                    bg-[--white] border-[--secondary-normal] hover:border-[--secondary-focused] border-2 flex justify-between text-lg">
+                <li class="flex-auto ">
+                    <a class="" href={`${s.title === "Home" ? "/" : s.title}`}>
+                        <div transition:name={s.title === active ? "none" : `title-${s.title.toLowerCase()}`} class=`text-[--primary-normal] hover:text-[--primary-focused] duration-150 text-center p-3 mx-3 rounded-lg
+                                    bg-${(s.title === active) ? "white-100" : "[--white]"} border-[--secondary-normal] hover:border-[--secondary-focused] border-2 flex justify-between text-lg`>
                             <p>{s.title}</p>
                             <img src={s.img} alt="">
                         </div>

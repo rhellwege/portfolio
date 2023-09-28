@@ -1,0 +1,22 @@
+---
+import Section from "../components/Section.astro";
+import MainLayout from "../layouts/MainLayout.astro";
+---
+<MainLayout title="About">
+    <Section title="About">
+        <h2 class="mb-2 text-[--primary-normal] text-2xl">Ryan Hellwege</h2>
+        <ul class="mb-2">
+            <li>I am a third year computer science student at CSUF.</li>
+            <li>I transferred from Saddleback Community College.</li>
+        </ul>
+        <div class="flex flex-row space-x-3 mt-3">
+            <a class="" href="https://github.com/rhellwege?tab=repositories">
+                <img class="object-scale-down w-10" src="github-mark.svg" alt="">
+            </a>
+            <div class="flex flex-row">
+                <img class="object-scale-down w-10" src="mail.svg" alt="">
+                <em>rhellwege6@gmail.com</em>
+            </div>
+        </div>
+    </Section>
+</MainLayout>
