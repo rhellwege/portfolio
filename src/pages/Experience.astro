@@ -1,5 +1,6 @@
 ---
 import Section from "../components/Section.astro";
+import Project from "../components/Project.astro";
 import MainLayout from "../layouts/MainLayout.astro";
 ---
 <MainLayout title="Experience">
@@ -10,11 +11,10 @@ import MainLayout from "../layouts/MainLayout.astro";
     </Section>
     <Section title="Projects">
         <!-- <h2 class="mt-4 mb-2 text-[--primary-normal] text-2xl">Programming Projects</h2> -->
-        <div class="ml-4 table col-auto">
-            <div><a class="underline" href="https://github.com/rhellwege/Mazer">Mazer - CLI Maze generator</a></div>
-            <div><a class="underline" href="https://github.com/rhellwege/Synnim">Synnim - Digital Synthesizer</a></div>
-            <div><a class="underline" href="https://github.com/rhellwege/netris">Netris - Tetris Clone writtern in Nim</a></div>
+        <div class="ml-4 grid sm:grid-rows-3 sm:grid-cols-none md:grid-rows-none md:grid-cols-3 gap-4">
+            <Project image="mazer.gif" title="Mazer" href="https://github.com/rhellwege/Mazer">Mazer - CLI Maze generator</Project>
+            <Project image="synnim.gif" title="Synnim" href="https://github.com/rhellwege/Synnim">Synnim - Digital Synthesizer</Project>
+            <Project image="netris.gif" title="Netris" href="https://github.com/rhellwege/Netris">Netris - Tetris Clone writtern in Nim</Project>
         </div>
-
     </Section>
 </MainLayout>
