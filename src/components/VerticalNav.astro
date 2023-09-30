@@ -1,5 +1,5 @@
 ---
-export interface SectionTitle {
+interface SectionTitle {
     title: string;
     img: string;
 };
@@ -21,7 +21,7 @@ const { sections, active } = Astro.props;
                         <div class=`text-[--primary-normal] hover:text-[--primary-focused] duration-150 text-center p-3 mx-3 rounded-lg
                                     ${(s.title === active) ? "bg-white" : "bg-[--white]"} border-[--secondary-normal] hover:border-[--secondary-focused] border-2 flex justify-between text-lg`>
                             <p transition:name={s.title === active ? "none" : `title-${s.title.toLowerCase()}`}>{s.title}</p>
-                            <img src={s.img} alt="">
+                            <img src={s.img} alt=""></img>
                         </div>
                     </a>
                 </li>)
@@ -31,7 +31,7 @@ const { sections, active } = Astro.props;
                     <div class="text-[--primary-normal] hover:text-[--primary-focused] duration-150 text-center p-3 mx-3 rounded-lg 
                                 bg-[--white] border-[--secondary-normal] hover:border-[--secondary-focused] border-2 flex justify-between text-lg">
                         <p>Download</p>
-                        <img src="download.svg" alt="">
+                        <img src="download.svg" alt=""></img>
                     </div>
                 </a>
             </li>

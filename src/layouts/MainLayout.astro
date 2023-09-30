@@ -3,6 +3,9 @@ import VerticalNav from "../components/VerticalNav.astro";
 
 import { ViewTransitions } from 'astro:transitions';
 
+
+import HamburgerNav from '../components/HamburgerNav';
+
 interface Props {
     title: string;
 };
@@ -26,10 +29,13 @@ const section_titles = [
 		<title>{title}</title>
 		<ViewTransitions />
 	</head>
-	<body class="scroll-smooth table tabl-column columns bg-[--white] ">
+	<body class="scroll-smooth flex flex-auto bg-[--white] w-full h-full">
 		<VerticalNav sections={section_titles} active={title}/> 
-		<main>
-			<div transition:animate="fade" class="w-full h-full ml-[--navbar-width]">
+		<div class="w-full h-full m-0 p-4">
+			<HamburgerNav client:visible sections={section_titles} active={title}/>
+		</div>
+		<main class="h-full fixed overflow-auto">
+			<div transition:animate="fade" class="m-0 px-2 md:px-10">
 				<slot />
 			</div>
 		</main>
@@ -37,9 +43,20 @@ const section_titles = [
 </html>
 
 <style>
-/* @media (min-width: 768px) {
-    ul {
+main {
+	padding-top: 10%;
+}
+@media (min-width: 768px) {
+    main {
         width: calc(100% - var(--navbar-width));
+		margin-left: var(--navbar-width);
     }
-} */
+}
+@media (max-width: 768px) {
+    main {
+        height: calc(100% - 80px);
+		width: 100%;
+		margin-top: 80px;
+    }
+}
 </style>
