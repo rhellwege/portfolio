@@ -44,7 +44,7 @@ const HamburgerNav = (props: Props) => {
     return (
         <nav className={backgroundClass + " p-6 fixed visible md:invisible z-20 w-full h-[--vertical-height]"}>
             <Hamburger rounded size={50} onToggle={handleToggle} />
-            <div className={menuClass + " w-full mt-1"}>
+            <div className={menuClass + " w-full mt-1 shadow-xl"}>
                 {links}     
             </div>
         </nav>

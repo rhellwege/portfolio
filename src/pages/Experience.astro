@@ -5,16 +5,50 @@ import MainLayout from "../layouts/MainLayout.astro";
 ---
 <MainLayout title="Experience">
     <Section title="Experience">
-        <h2 class="mb-2 text-[--primary-normal] text-2xl">Work Experience</h2>
-        <img class="object-scale-down w-48 mt-4 mb-2" src="albertsons.svg" alt="">
-        <p>Albertsons Deli Clerk 2021-2022</p>
+        <div class="flex flex-col gap-y-10 px-12">
+            <div class="flex justify-between">
+                <div class="w-[400px]">
+                    <h2 class="mb-2 text-[--primary-normal] text-2xl">Associate in Science: Computer Science</h2>
+                    <hr class="h-[2px] my-3 bg-[--black] border-0 ">
+                    <p>Saddleback Community College 2020-2023</p>
+                    <p class="text-sm">Learned the fundamentals of Computer Science and took extra electrical engineering related classes</p>
+                </div>
+                <img class="h-full md:visible invisible" src="saddleback_logo.svg" alt="">
+            </div>
+            <div class="flex justify-between">
+                <div class="w-[400px]">
+                    <h2 class="mb-2 text-[--primary-normal] text-2xl">Employment</h2>
+                    <hr class="h-[2px] my-3 bg-[--black] border-0 ">
+                    <p>Albertsons Deli Clerk 2021-2022</p>
+                    <p class="text-sm">Learned the fundamentals of Computer Science and took extra electrical engineering related classes</p>
+                </div>
+                <img class="object-scale-down w-48 md:visible invisible" src="albertsons.svg" alt="">
+            </div>
+            <div class="flex justify-between">
+                <div class="w-[400px]">
+                    <h2 class="mb-2 text-[--primary-normal] text-2xl">Current Education</h2>
+                    <hr class="h-[2px] my-3 bg-[--black] border-0 ">
+                    <p>California State University Fullerton: Computer Science 2023-2025</p>
+                    <p class="text-sm">Learned the fundamentals of Computer Science and took extra electrical engineering related classes</p>
+                </div>
+                <img class="object-scale-down w-48 md:visible invisible" src="csuf.png" alt="">
+            </div>
+        </div>
     </Section>
     <Section title="Projects">
         <!-- <h2 class="mt-4 mb-2 text-[--primary-normal] text-2xl">Programming Projects</h2> -->
         <div class="ml-4 grid sm:grid-rows-3 sm:grid-cols-none md:grid-rows-none md:grid-cols-3 gap-4">
-            <Project image="mazer.gif" title="Mazer" href="https://github.com/rhellwege/Mazer">Mazer - CLI Maze generator</Project>
-            <Project image="synnim.gif" title="Synnim" href="https://github.com/rhellwege/Synnim">Synnim - Digital Synthesizer</Project>
-            <Project image="netris.gif" title="Netris" href="https://github.com/rhellwege/Netris">Netris - Tetris Clone writtern in Nim</Project>
+            <Project image="mazer.gif" title="Mazer" href="https://github.com/rhellwege/Mazer">
+                CLI maze generator and solver. Can output pngs or gifs of maze generation or solving. Supports 5 generation algorithms, and 6 solving algorithms. Maze width and height are also customizable.
+            </Project>
+            
+            <Project image="synnim.gif" title="Synnim" href="https://github.com/rhellwege/Synnim">
+                Digital synthesizer written in the nim programming language. It supports the 3 main types of oscillators, and various audio filters. Also can visual sound waves by frequency and amplitude.
+            </Project>
+
+            <Project image="netris.gif" title="Netris" href="https://github.com/rhellwege/Netris">
+                Tetris clone written in the nim programming language. This project was created to give me an understanding of webassembly, and how to connect a graphics library to the web browser's canvas through webassembly.
+            </Project>
         </div>
     </Section>
 </MainLayout>
