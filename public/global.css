@@ -3,6 +3,7 @@
 :root {
     --border-width: 2px;
     --navbar-width: 220px;
+    --vertical-height: 300px;
     --navbar-padding-y: 14rem;
     --navbar-padding-x: 1rem;
     --section-ml: 10%;
@@ -10,6 +11,6 @@
     --white: #e3e3da;
     --primary-normal: #4686a1;
     --primary-focus: #3b8ea5ff;
-    --secondary-normal: #f5ee9eff;
+    --secondary-normal: rgb(158, 218, 245);
     --secondary-focus: #f49e4cff;
 }

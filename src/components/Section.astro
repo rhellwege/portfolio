@@ -6,9 +6,9 @@ interface Props {
 const { title } = Astro.props;
 ---
 
-<div class="p-0 border-[--border-color] border-0 md:border-2 w-full h-full">
+<div class="p-1 border-[--border-color] border-0 md:border-2 w-full h-full">
     <h1 transition:name=`title-${title.toLowerCase()}` class="p-2 text-3xl font-bold">{title}</h1>
-    <hr class="h-px my-4 bg-[--black] border-0 ">
+    <hr class="h-[2px] my-3 bg-[--black] border-0 ">
     <div transition:animate="slide" class="text-lg text-[--primary-color] p-5">
         <slot />
     </div>

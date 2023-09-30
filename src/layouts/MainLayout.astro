@@ -31,10 +31,8 @@ const section_titles = [
 	</head>
 	<body class="scroll-smooth flex flex-auto bg-[--white] w-full h-full">
 		<VerticalNav sections={section_titles} active={title}/> 
-		<div class="w-full h-full m-0 p-4">
-			<HamburgerNav client:visible sections={section_titles} active={title}/>
-		</div>
-		<main class="h-full fixed overflow-auto">
+		<HamburgerNav client:visible sections={section_titles} active={title}/>
+		<main class="h-full overflow-auto">
 			<div transition:animate="fade" class="m-0 px-2 md:px-10">
 				<slot />
 			</div>
